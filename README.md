@@ -1,5 +1,11 @@
 # Portfólio — Gabriel
 
+**Site no ar:** https://kaka198977.github.io/portifolio/
+
+**Repositório:** https://github.com/kaka198977/portifolio
+
+---
+
 Portfólio profissional de **Gabriel**, estudante do **Curso Técnico em Análise e Desenvolvimento de
 Sistemas (SENAI)**, em Ponta Grossa (PR).
 
@@ -182,42 +188,31 @@ do visitante com a mensagem já preenchida — nenhuma mensagem se perde.
 
 ## Como publicar de graça (GitHub Pages)
 
-O repositório é `kaka198977/portifolio` e o site final fica em
-`https://kaka198977.github.io/portifolio/`.
-
-### Opção A — pelo navegador (não precisa instalar nada)
-
-1. Acesse https://github.com/new, use o nome **portifolio**, marque **Public** e clique em
-   **Create repository**;
-2. Na página do repositório, clique em **uploading an existing file** (ou em **Add file ->
-   Upload files**);
-3. **Arraste a pasta do projeto inteira** para a área de upload. Ponto importante: o
-   `index.html` precisa ficar na **raiz** do repositório, não dentro de uma subpasta;
-4. Escreva uma mensagem (ex: `Portfolio inicial`) e clique em **Commit changes**;
-5. Vá em **Settings -> Pages**; em *Source* escolha **Deploy from a branch**, branch **main**,
-   pasta **/ (root)** e clique em **Save**;
-6. Em 1 ou 2 minutos o site estará no ar.
-
-### Opção B — com o Git instalado (melhor para manutenção)
-
-Instale o Git em https://git-scm.com/download/win e depois, no PowerShell:
-
-```powershell
-cd "c:\Users\ALUNO SESI E SENAI\portifolio"
-git init -b main
-git add .
-git commit -m "Portfolio"
-git remote add origin https://github.com/kaka198977/portifolio.git
-git push -u origin main
-```
-
-Na primeira vez o Git abre uma janela do navegador para você entrar na sua conta do GitHub.
+O site **já está publicado** em `https://kaka198977.github.io/portifolio/`
+(repositório: `kaka198977/portifolio`, branch `main`, pasta `/ (root)`).
 
 ### Como atualizar o site depois
 
-- **Pelo navegador:** **Add file -> Upload files**, envie os arquivos alterados (ele substitui os
-  antigos) e confirme o commit;
-- **Com Git:** `git add .` , `git commit -m "ajustes"` , `git push`.
+1. Entre em https://github.com/kaka198977/portifolio;
+2. Clique em **Add file -> Upload files**;
+3. Arraste os arquivos que você alterou (ele substitui os antigos) e clique em **Commit changes**;
+4. Em 1 ou 2 minutos o site no ar é atualizado automaticamente.
+
+Se preferir, instale o Git (https://git-scm.com/download/win) e use:
+
+```powershell
+cd "c:\Users\ALUNO SESI E SENAI\portifolio"
+git add .
+git commit -m "ajustes"
+git push
+```
+
+### Publicando do zero em outro repositório
+
+1. Crie o repositório no GitHub (público);
+2. Faça o upload dos arquivos (o `index.html` precisa ficar na **raiz**);
+3. Vá em **Settings -> Pages**, escolha *Deploy from a branch*, branch **main**, pasta **/ (root)**
+   e clique em **Save**;
 
 O arquivo `.nojekyll` já está no projeto: ele evita que o GitHub Pages tente processar o site como
 um projeto Jekyll, mantendo a publicação simples e direta.
