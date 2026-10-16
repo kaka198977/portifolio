@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO / COMPARTILHAMENTO ===== -->
+  <title>Gabriel | Desenvolvedor e Estudante de ADS — SENAI</title>
+  <meta name="description" content="Portfólio de Gabriel — estudante do Curso Técnico em Análise e Desenvolvimento de Sistemas no SENAI, em Ponta Grossa (PR). Desenvolvimento em Python, C++, HTML, CSS e integração com Inteligência Artificial." />
+  <meta name="author" content="Gabriel Kaique Correia da Luz" />
+  <meta name="theme-color" content="#0b0d17" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gabriel | Desenvolvedor e Estudante de ADS — SENAI" />
+  <meta property="og:description" content="Projetos, habilidades e experiência com Python, C++, desenvolvimento web e integração com IA." />
+  <meta property="og:image" content="perfil.jpg" />
+
+  <!-- Favicon inline (não precisa de arquivo externo) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236c5ce7'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ============ SPRITE DE ICONES SVG (gerado a partir de simple-icons + lucide) ============ -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-python" viewBox="0 0 24 24"><path fill="currentColor" d="m14.25.18l.9.2l.73.26l.59.3l.45.32l.34.34l.25.34l.16.33l.1.3l.04.26l.02.2l-.01.13V8.5l-.05.63l-.13.55l-.21.46l-.26.38l-.3.31l-.33.25l-.35.19l-.35.14l-.33.1l-.3.07l-.26.04l-.21.02H8.77l-.69.05l-.59.14l-.5.22l-.41.27l-.33.32l-.27.35l-.2.36l-.15.37l-.1.35l-.07.32l-.04.27l-.02.21v3.06H3.17l-.21-.03l-.28-.07l-.32-.12l-.35-.18l-.36-.26l-.36-.36l-.35-.46l-.32-.59l-.28-.73l-.21-.88l-.14-1.05l-.05-1.23l.06-1.22l.16-1.04l.24-.87l.32-.71l.36-.57l.4-.44l.42-.33l.42-.24l.4-.16l.36-.1l.32-.05l.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75l-.02-.37l.05-.34l.11-.31l.17-.28l.25-.26l.31-.23l.38-.2l.44-.18l.51-.15l.58-.12l.64-.1l.71-.06l.77-.04l.84-.02l1.27.05zm-6.3 1.98l-.23.33l-.08.41l.08.41l.23.34l.33.22l.41.09l.41-.09l.33-.22l.23-.34l.08-.41l-.08-.41l-.23-.33l-.33-.22l-.41-.09l-.41.09zm13.09 3.95l.28.06l.32.12l.35.18l.36.27l.36.35l.35.47l.32.59l.28.73l.21.88l.14 1.04l.05 1.23l-.06 1.23l-.16 1.04l-.24.86l-.32.71l-.36.57l-.4.45l-.42.33l-.42.24l-.4.16l-.36.09l-.32.05l-.24.02l-.16-.01h-8.22v.82h5.84l.01 2.76l.02.36l-.05.34l-.11.31l-.17.29l-.25.25l-.31.24l-.38.2l-.44.17l-.51.15l-.58.13l-.64.09l-.71.07l-.77.04l-.84.01l-1.27-.04l-1.07-.14l-.9-.2l-.73-.25l-.59-.3l-.45-.33l-.34-.34l-.25-.34l-.16-.33l-.1-.3l-.04-.25l-.02-.2l.01-.13v-5.34l.05-.64l.13-.54l.21-.46l.26-.38l.3-.32l.33-.24l.35-.2l.35-.14l.33-.1l.3-.06l.26-.04l.21-.02l.13-.01h5.84l.69-.05l.59-.14l.5-.21l.41-.28l.33-.32l.27-.35l.2-.36l.15-.36l.1-.35l.07-.32l.04-.28l.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33l-.08.41l.08.41l.23.33l.33.23l.41.08l.41-.08l.33-.23l.23-.33l.08-.41l-.08-.41l-.23-.33l-.33-.23l-.41-.08l-.41.08z"/></symbol>
+    <symbol id="i-cplusplus" viewBox="0 0 24 24"><path fill="currentColor" d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91s.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69s.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91M12 19.11c-3.92 0-7.109-3.19-7.109-7.11s3.19-7.11 7.11-7.11a7.13 7.13 0 0 1 6.156 3.553l-3.076 1.78a3.57 3.57 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12A3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.14 7.14 0 0 1 12 19.11m7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></symbol>
+    <symbol id="i-html5" viewBox="0 0 24 24"><path fill="currentColor" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438zm7.031 9.75l-.232-2.718l10.059.003l.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426l-2.91.804l-2.955-.81l-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443l.744-8.157z"/></symbol>
+    <symbol id="i-css" viewBox="0 0 24 24"><path fill="currentColor" d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84c-.096-.192-.288-.264-.552-.264c-.456 0-.696.264-.696.84c-.024.576.288.888.768 1.08c.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592c-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176c.264 0 .456-.072.552-.24c.192-.312.24-1.176-.048-1.512c-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536c0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84c-.096-.192-.264-.264-.528-.264c-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296c.264.432.408.984.408 1.656c.024 1.608-.888 2.592-2.472 2.592c-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176c.264 0 .456-.072.552-.24c.216-.312.264-1.176-.048-1.512c-.288-.408-.888-.6-1.32-.816c-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63c.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96c-.312-.144-.768-.048-.888.24c-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688c-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848c.432-.408 1.146-.624 1.857-.63"/></symbol>
+    <symbol id="i-javascript" viewBox="0 0 24 24"><path fill="currentColor" d="M0 0h24v24H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873c-.736-.345-1.554-.585-1.797-1.14c-.091-.33-.105-.51-.046-.705c.15-.646.915-.84 1.515-.66c.39.12.75.42.976.9c1.034-.676 1.034-.676 1.755-1.125c-.27-.42-.404-.601-.586-.78c-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005c-1.14 1.291-.811 3.541.569 4.471c1.365 1.02 3.361 1.244 3.616 2.205c.24 1.17-.87 1.545-1.966 1.41c-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109c1.74 1.756 6.09 1.666 6.871-1.004c.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805c0 1.232.063 2.363-.138 2.711c-.33.689-1.18.601-1.566.48c-.396-.196-.597-.466-.83-.855c-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517c.855.51 2.004.675 3.207.405c.783-.226 1.458-.691 1.811-1.411c.51-.93.402-2.07.397-3.346c.012-2.054 0-4.109 0-6.179z"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><path fill="currentColor" d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19l2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63L10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-mysql" viewBox="0 0 24 24"><path fill="currentColor" d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273c.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333c-.04-.047-.046-.094-.08-.14c-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a51 51 0 0 0-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a73 73 0 0 0-.195 4.41H0q.083-2.95.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095q.363 3.024.428 5.53zm4.017-4.08q-.567 3.069-1.492 4.46q-.723 1.074-1.583 1.073q-.228 0-.566-.138v-.494q.166.026.386.026q.402 0 .647-.222q.295-.27.295-.605q0-.233-.23-.944L6.23 14.615h.91l.727 2.36q.247.804.205 1.123q.6-1.598.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5q.136-.113.255-.25q.649-.76.648-2.253q0-2.745-2.155-2.746q-1.056 0-1.65.697q-.646.762-.646 2.245q-.001 1.459.574 2.14q.524.615 1.583.615q.396 0 .725-.098l1.325.772l.36-.622zM15.5 17.588q-.337-.541-.337-1.736q0-2.09 1.27-2.09q.666 0 .977.5q.336.543.336 1.723q0 2.107-1.27 2.108q-.667 0-.978-.5zm-1.658-.425q0 .706-.516 1.156q-.514.45-1.384.45c-.543 0-1.064-.172-1.573-.515l.237-.476q.656.329 1.19.328q.498 0 .783-.22a.75.75 0 0 0 .3-.615c0-.33-.23-.61-.648-.845c-.388-.213-1.163-.657-1.163-.657c-.422-.307-.632-.636-.632-1.177q0-.674.47-1.085q.471-.416 1.22-.415q.769 0 1.4.41l-.213.476a2.7 2.7 0 0 0-1.064-.23q-.425 0-.654.206a.69.69 0 0 0-.248.524c0 .328.234.61.666.85c.393.215 1.187.67 1.187.67c.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188c-.1.04-.26.04-.274.167c.055.053.063.14.11.214c.08.134.218.313.346.407q.208.167.427.31c.26.16.555.255.81.416c.145.094.293.213.44.313c.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214c-.067-.067-.134-.127-.2-.193a3.2 3.2 0 0 0-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106c.227-.06.435-.047.67-.106q.16-.042.32-.094v-.06c-.12-.12-.21-.283-.334-.395a9 9 0 0 0-1.104-.823c-.21-.134-.476-.22-.697-.334c-.08-.04-.214-.06-.26-.127c-.12-.146-.19-.34-.275-.514a18 18 0 0 1-.547-1.163c-.12-.262-.193-.523-.34-.763c-.69-1.137-1.437-1.826-2.586-2.5c-.247-.14-.543-.2-.856-.274c-.167-.008-.334-.02-.5-.027c-.11-.047-.216-.174-.31-.235c-.38-.24-1.364-.76-1.644-.072c-.18.434.267.862.422 1.082c.115.153.26.328.34.5c.047.116.06.235.107.356c.106.294.207.622.347.897c.073.14.153.287.247.413c.054.073.146.107.167.227c-.094.136-.1.334-.154.5c-.24.757-.146 1.693.194 2.25c.107.166.362.534.703.393c.3-.12.234-.5.32-.835c.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555c.206.328.566.668.867.895c.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.5 3.5 0 0 1-.35-.4a9 9 0 0 1-.747-1.218c-.11-.21-.202-.436-.29-.643c-.04-.08-.04-.2-.107-.24c-.1.146-.247.273-.32.453c-.127.288-.14.642-.188 1.01c-.027.007-.014 0-.027.014c-.214-.052-.287-.274-.367-.46c-.2-.475-.233-1.238-.06-1.785c.047-.14.247-.582.167-.716c-.042-.127-.174-.2-.247-.303a2.5 2.5 0 0 1-.24-.427c-.16-.374-.24-.788-.414-1.162c-.08-.173-.22-.354-.334-.513c-.127-.18-.267-.307-.368-.52c-.033-.073-.08-.194-.027-.274c.014-.054.042-.075.094-.09c.088-.072.335.022.422.062c.247.1.455.194.662.334c.094.066.195.193.315.226h.14c.214.047.455.014.655.073c.355.114.675.28.962.46a5.95 5.95 0 0 1 2.085 2.286c.08.154.115.295.188.455c.14.33.313.663.455.982c.14.315.275.636.476.897c.1.14.502.213.682.286c.133.06.34.115.46.188c.23.14.454.3.67.454c.11.076.443.243.463.378"/></symbol>
+    <symbol id="i-openai" viewBox="0 0 24 24"><path fill="currentColor" d="M22.282 9.821a6 6 0 0 0-.516-4.91a6.05 6.05 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a6 6 0 0 0-3.998 2.9a6.05 6.05 0 0 0 .743 7.097a5.98 5.98 0 0 0 .51 4.911a6.05 6.05 0 0 0 6.515 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.772-4.206a6 6 0 0 0 3.997-2.9a6.06 6.06 0 0 0-.747-7.073M13.26 22.43a4.48 4.48 0 0 1-2.876-1.04l.141-.081l4.779-2.758a.8.8 0 0 0 .392-.681v-6.737l2.02 1.168a.07.07 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494M3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085l4.783 2.759a.77.77 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646M2.34 7.896a4.5 4.5 0 0 1 2.366-1.973V11.6a.77.77 0 0 0 .388.677l5.815 3.354l-2.02 1.168a.08.08 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.08.08 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667m2.01-3.023l-.141-.085l-4.774-2.782a.78.78 0 0 0-.785 0L9.409 9.23V6.897a.07.07 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.8.8 0 0 0-.393.681zm1.097-2.365l2.602-1.5l2.607 1.5v2.999l-2.597 1.5l-2.607-1.5Z"/></symbol>
+    <symbol id="i-googlegemini" viewBox="0 0 24 24"><path fill="currentColor" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68q.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58a12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68q-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96q2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+    <symbol id="i-visualstudiocode" viewBox="0 0 24 24"><path fill="currentColor" d="M23.15 2.587L18.21.21a1.49 1.49 0 0 0-1.705.29l-9.46 8.63l-4.12-3.128a1 1 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12L.326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a1 1 0 0 0 1.276.057l4.12-3.128l9.46 8.63a1.49 1.49 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352m-5.146 14.861L10.826 12l7.178-5.448z"/></symbol>
+    <symbol id="i-figma" viewBox="0 0 24 24"><path fill="currentColor" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491M12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539m-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019c1.705 0 3.093-1.376 3.093-3.068v-2.97zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49m-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52s.198-.298.298-.497c.099-.198.05-.371-.025-.52s-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a13 13 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074s2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413s.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065m1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></symbol>
+    <symbol id="i-gmail" viewBox="0 0 24 24"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64L12 9.548l6.545-4.91l1.528-1.145C21.69 2.28 24 3.434 24 5.457"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 18l6-6l-6-6M8 6l-6 6l6 6"/></symbol>
+    <symbol id="i-brain-circuit" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 5a3 3 0 1 0-5.997.125a4 4 0 0 0-2.526 5.77a4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4M6.003 5.125A3 3 0 0 0 6.401 6.5m-2.924 4.396a4 4 0 0 1 .585-.396M6 18a4 4 0 0 1-1.967-.516M12 13h4m-4 5h6a2 2 0 0 1 2 2v1M12 8h8m-4 0V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-graduation-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g></symbol>
+    <symbol id="i-languages" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><path d="M6 6h.01M6 18h.01"/></g></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4m2-2h-4"/><circle cx="4" cy="20" r="2"/></g></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.914 4a1.5 1.5 0 0 0-2.474-1.561l-9 9A1.5 1.5 0 0 0 5.5 14h4.002a.5.5 0 0 1 .471.666L8.086 20a1.5 1.5 0 0 0 2.475 1.56l9-9A1.5 1.5 0 0 0 18.5 10h-3.997a.5.5 0 0 1-.472-.667z"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19h8M4 17l6-6l-6-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10l5 5l5-5"/></g></symbol>
+  </svg>
+  <!-- ================= FUNDO DECORATIVO ================= -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <!-- Barra de progresso de leitura -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Ir para o início">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">Gabriel<span class="accent">.</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#curriculo" class="nav-link">Currículo</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+
+        <a href="curriculo.pdf" class="btn btn-ghost btn-sm hide-mobile" download>
+          Currículo
+        </a>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="badge">
+            <span class="dot"></span> Disponível para oportunidades
+          </span>
+
+          <h1 class="hero-title">
+            Olá, eu sou <span class="gradient-text">Gabriel</span>
+          </h1>
+
+          <p class="hero-role">
+            <span id="typed"></span><span class="cursor">|</span>
+          </p>
+
+          <p class="hero-desc">
+            Estudante do <strong>Curso Técnico em Análise e Desenvolvimento de Sistemas no SENAI</strong>,
+            em Ponta Grossa (PR), e desenvolvedor em formação. Crio soluções em
+            <strong>Python</strong> e <strong>C++</strong>, interfaces com
+            <strong>HTML, CSS e JavaScript</strong> e integro
+            <strong>Inteligência Artificial</strong> (LLMs via API) em projetos reais.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">
+              Ver meus projetos
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a
+              href="https://celioxer.github.io/TDS_SESI/Interdisciplinar_Coop/site-vila-velha/index.html"
+              class="btn btn-live"
+              target="_blank"
+              rel="noopener">
+              <span class="live-dot" aria-hidden="true"></span>
+              Ver meu site
+            </a>
+            <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+          </div>
+
+          <ul class="socials">
+            <li>
+              <a href="https://github.com/kaka198977" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.0 18.1 4.3 18.1 4.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/gabriel-kaique-correia-da-luz-a88342341" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.2 8.65 21 10.9 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2.03 0-2.34 1.58-2.34 3.2V21H9z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:gabrielcorreialuz2000@gmail.com" aria-label="E-mail" title="E-mail">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/5542991275048" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4 0-.5.1-.7l.5-.6c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3a8.4 8.4 0 0 0 5.6 4 6 6 0 0 0 2.9.3c.6-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-photo reveal" data-delay="150">
+          <div class="photo-wrap">
+            <div class="photo-frame">
+              <div class="photo-glow" aria-hidden="true"></div>
+              <img
+                src="perfil.jpg"
+                alt="Foto de perfil de Gabriel"
+                class="photo"
+                id="photo"
+                decoding="async"
+                onerror="this.closest('.photo-frame').classList.add('no-photo')" />
+              <div class="photo-fallback" id="photoFallback" aria-hidden="true">G</div>
+              <span class="photo-ring" aria-hidden="true"></span>
+            </div>
+
+            <div class="floating-chip chip-1">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-python"></use></svg> Python
+            </div>
+            <div class="floating-chip chip-2">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-openai"></use></svg> IA
+            </div>
+            <div class="floating-chip chip-3">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-cplusplus"></use></svg> C++
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="mouse"></span>
+        <span class="scroll-text">Role para baixo</span>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">01 — Sobre mim</span>
+          <h2 class="section-title">Quem está por trás do código</h2>
+          <p class="section-sub">Um pouco da minha história, objetivos e do que eu gosto de construir.</p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Tenho <strong>paixão por resolver problemas</strong> e por entender como as coisas
+              funcionam por dentro. Foi na programação que encontrei o lugar onde lógica, criatividade
+              e curiosidade se encontram.
+            </p>
+            <p>
+              Hoje faço o <strong>Curso Técnico em Análise e Desenvolvimento de Sistemas no SENAI</strong>,
+              em Ponta Grossa, onde construo a base que todo profissional precisa: lógica de
+              programação, estrutura de dados, banco de dados, engenharia de software e trabalho em
+              equipe.
+            </p>
+            <p>
+              Além do curso, estudo por conta própria e uso a <strong>Inteligência Artificial</strong>
+              de forma estratégica no meu dia a dia — da automação de tarefas à revisão de código e
+              aceleração do aprendizado. Vejo a IA como ferramenta de produtividade, e não como
+              substituta do raciocínio.
+            </p>
+            <p>
+              Atualmente trabalho como <strong>Assistente de Registro e Digitalização no 2.º Registro
+              de Imóveis de Ponta Grossa</strong>, onde desenvolvi organização, precisão e
+              responsabilidade no trato com dados. Meu objetivo agora é
+              <strong>migrar para a área de desenvolvimento</strong> — como estagiário ou
+              desenvolvedor júnior — aplicando o que já sei em projetos reais.
+            </p>
+
+            <div class="about-info">
+              <div class="info-item">
+                <span class="info-label"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-map-pin"></use></svg> Localização</span>
+                <span>Ponta Grossa — PR</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-graduation-cap"></use></svg> Formação</span>
+                <span>Curso Técnico · SENAI</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-target"></use></svg> Foco</span>
+                <span>Desenvolvimento & IA</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-languages"></use></svg> Idiomas</span>
+                <span>Português (nativo)</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-stats reveal" data-delay="120">
+            <div class="stat-card">
+              <span class="stat-number" data-count="5" data-suffix="">0</span>
+              <span class="stat-label">Linguagens de programação</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="6" data-suffix="">0</span>
+              <span class="stat-label">Projetos desenvolvidos</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="4" data-suffix="">0</span>
+              <span class="stat-label">Áreas: IA, web, dados e algoritmos</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="2026" data-suffix="">0</span>
+              <span class="stat-label">Conclusão prevista do curso técnico</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HABILIDADES ================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">02 — Habilidades</span>
+          <h2 class="section-title">Tecnologias que eu domino</h2>
+          <p class="section-sub">Ferramentas e conhecimentos que uso para tirar ideias do papel.</p>
+        </header>
+
+        <div class="skills-grid">
+          <!-- CARD 1 -->
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-code"></use></svg></span>
+              <h3>Linguagens & Programação</h3>
+            </div>
+            <ul class="skill-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-python"></use></svg> Python</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-cplusplus"></use></svg> C++</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-html5"></use></svg> HTML5</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-css"></use></svg> CSS3</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain-circuit"></use></svg> Lógica e Algoritmos</li>
+            </ul>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="skill-card reveal" data-delay="120">
+            <div class="skill-card-head">
+              <span class="skill-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-brain-circuit"></use></svg></span>
+              <h3>Inteligência Artificial</h3>
+            </div>
+            <ul class="skill-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-openai"></use></svg> Integração com APIs de IA</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkles"></use></svg> Prompt Engineering</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-zap"></use></svg> Automação de tarefas</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain-circuit"></use></svg> IA aplicada a estudos e projetos</li>
+            </ul>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="skill-card reveal" data-delay="240">
+            <div class="skill-card-head">
+              <span class="skill-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+              <h3>Ferramentas & Outros</h3>
+            </div>
+            <ul class="skill-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-github"></use></svg> Git e GitHub</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mysql"></use></svg> Banco de Dados / SQL</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-visualstudiocode"></use></svg> VS Code</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-figma"></use></svg> Design de interfaces (UI)</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="tech-cloud-title reveal">Outras tecnologias e ferramentas que já usei</p>
+
+        <div class="tech-cloud reveal" data-delay="300">
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-python"></use></svg> Python</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-cplusplus"></use></svg> C++</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-html5"></use></svg> HTML5</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-css"></use></svg> CSS3</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-javascript"></use></svg> JavaScript</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-git"></use></svg> Git</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-github"></use></svg> GitHub</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mysql"></use></svg> SQL</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-server"></use></svg> APIs REST</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-openai"></use></svg> OpenAI API</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-googlegemini"></use></svg> Gemini API</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkles"></use></svg> Prompt Engineering</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-zap"></use></svg> Automação</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain-circuit"></use></svg> Lógica de Programação</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-visualstudiocode"></use></svg> VS Code</span>
+          <span class="tech-chip"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-figma"></use></svg> Figma</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJETOS ================= -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">03 — Projetos</span>
+          <h2 class="section-title">Coisas que eu construí</h2>
+          <p class="section-sub">
+            Projetos que desenvolvi na prática — do site publicado ao código no GitHub. Use os
+            filtros para navegar por categoria.
+          </p>
+        </header>
+
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Filtrar projetos">
+          <button class="filter-btn active" data-filter="todos" type="button">Todos</button>
+          <button class="filter-btn" data-filter="ia" type="button">Inteligência Artificial</button>
+          <button class="filter-btn" data-filter="python" type="button">Python</button>
+          <button class="filter-btn" data-filter="web" type="button">Web</button>
+          <button class="filter-btn" data-filter="cpp" type="button">C++</button>
+        </div>
+
+        <!-- Os cards são gerados automaticamente pelo JavaScript -->
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= CURRÍCULO ================= -->
+    <section class="section section-alt" id="curriculo">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">04 — Currículo</span>
+          <h2 class="section-title">Currículo completo</h2>
+          <p class="section-sub">
+            Resumo profissional, formação, experiência e competências — o mesmo conteúdo do PDF,
+            direto na página.
+          </p>
+          <div class="cv-actions">
+            <a href="curriculo.pdf" class="btn btn-primary" download>
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-download"></use></svg>
+              Baixar currículo em PDF
+            </a>
+            <a href="curriculo.html" class="btn btn-outline" target="_blank" rel="noopener">
+              Versão para impressão
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gabriel-kaique-correia-da-luz-a88342341"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener">
+              Ver no LinkedIn
+            </a>
+          </div>
+        </header>
+
+        <div class="cv-layout">
+          <!-- Coluna 1: resumo e competências -->
+          <div class="cv-column">
+            <article class="cv-card reveal">
+              <h3 class="cv-title">Resumo profissional</h3>
+              <p>
+                Desenvolvedor em formação com base sólida em lógica de programação, desenvolvimento
+                web e integração de Inteligência Artificial. Tenho experiência profissional na área
+                administrativa e notarial, que me trouxe organização documental, precisão e
+                responsabilidade no trato com dados, e hoje direciono meus estudos para soluções
+                automatizadas com IA aplicada.
+              </p>
+            </article>
+
+            <article class="cv-card reveal" data-delay="80">
+              <h3 class="cv-title">Competências técnicas</h3>
+
+              <div class="cv-group">
+                <h4>Linguagens de programação</h4>
+                <ul class="cv-tags">
+                  <li>Python 3</li><li>JavaScript</li><li>C++</li><li>HTML5</li><li>CSS3</li>
+                </ul>
+              </div>
+
+              <div class="cv-group">
+                <h4>Inteligência Artificial & Dados</h4>
+                <ul class="cv-tags">
+                  <li>APIs de IA (LLMs)</li><li>OpenAI</li><li>Gemini</li>
+                  <li>Engenharia de Prompt</li><li>Automação de processos</li>
+                  <li>Análise de dados</li><li>Manutenção preditiva</li>
+                </ul>
+              </div>
+
+              <div class="cv-group">
+                <h4>Ferramentas & Conhecimentos</h4>
+                <ul class="cv-tags">
+                  <li>Git e GitHub</li><li>VS Code</li><li>Pacote Office</li>
+                  <li>Banco de Dados</li><li>Algoritmos</li><li>Lógica de Programação</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="cv-card reveal" data-delay="160">
+              <h3 class="cv-title">Competências pessoais</h3>
+              <ul class="cv-list">
+                <li><svg class="icon icon-xs" aria-hidden="true"><use href="#i-target"></use></svg> Organização documental e atenção aos detalhes</li>
+                <li><svg class="icon icon-xs" aria-hidden="true"><use href="#i-brain-circuit"></use></svg> Raciocínio lógico e resolução de problemas</li>
+                <li><svg class="icon icon-xs" aria-hidden="true"><use href="#i-zap"></use></svg> Aprendizagem rápida de novas tecnologias</li>
+                <li><svg class="icon icon-xs" aria-hidden="true"><use href="#i-languages"></use></svg> Trabalho em equipe e comunicação</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Coluna 2: trajetória -->
+          <div class="cv-column">
+            <h3 class="cv-side-title reveal">Trajetória</h3>
+            <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 — Atual</span>
+              <h3>Curso Técnico em Análise e Desenvolvimento de Sistemas</h3>
+              <h4>SENAI — Ponta Grossa (PR)</h4>
+              <p>
+                Formação técnica voltada ao desenvolvimento de software: lógica de programação,
+                estrutura de dados, banco de dados, engenharia de software, desenvolvimento web e
+                boas práticas de projeto.
+              </p>
+              <ul class="timeline-tags">
+                <li>Python</li><li>C++</li><li>Banco de Dados</li><li>Engenharia de Software</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="80">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">nov/2025 — Atual</span>
+              <h3>Assistente de Registro e Digitalização</h3>
+              <h4>2.º Registro de Imóveis de Ponta Grossa</h4>
+              <p>
+                Registro, verificação e atualização contínua de dados no sistema notarial, além de
+                digitalização, indexação e organização de documentos com alto padrão de precisão,
+                padronização e segurança da informação.
+              </p>
+              <ul class="timeline-tags">
+                <li>Organização documental</li><li>Precisão de dados</li><li>Responsabilidade</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="120">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 — Atual</span>
+              <h3>Desenvolvimento Web & Integração com IA</h3>
+              <h4>Estudos e projetos próprios</h4>
+              <p>
+                Estudo autônomo de HTML, CSS e integração de aplicações com APIs de Inteligência
+                Artificial, aplicando IA na criação de interfaces, automações e no meu próprio fluxo
+                de desenvolvimento.
+              </p>
+              <ul class="timeline-tags">
+                <li>HTML5</li><li>CSS3</li><li>APIs de IA</li><li>Automação</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="200">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2026 — Projeto interdisciplinar</span>
+              <h3>Site — Parque Estadual de Vila Velha</h3>
+              <h4>Equipe Trupe · SENAI</h4>
+              <p>
+                Desenvolvimento do site educativo sobre o Parque Estadual de Vila Velha, em Ponta
+                Grossa. Fiquei responsável pela programação (HTML e CSS) e os demais integrantes
+                pela pesquisa de conteúdo — trabalho em equipe com divisão de tarefas e prazo de
+                entrega.
+              </p>
+              <ul class="timeline-tags">
+                <li>HTML5</li><li>CSS3</li><li>Trabalho em equipe</li><li>Site publicado</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="300">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">Em breve</span>
+              <h3>Primeira oportunidade profissional</h3>
+              <h4>Jovem Aprendiz / Estágio / Desenvolvedor Júnior</h4>
+              <p>
+                Buscando minha primeira experiência no mercado para aplicar meus conhecimentos em
+                projetos reais, evoluir tecnicamente e contribuir com resultados para a equipe.
+              </p>
+            </div>
+          </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">05 — Contato</span>
+          <h2 class="section-title">Vamos trabalhar juntos?</h2>
+          <p class="section-sub">
+            Estou aberto a oportunidades, freelances e parcerias em projetos. Me chama!
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a class="contact-card" href="mailto:gabrielcorreialuz2000@gmail.com">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/></svg>
+              </span>
+              <span>
+                <strong>E-mail</strong>
+                <small>gabrielcorreialuz2000@gmail.com</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://wa.me/5542991275048" target="_blank" rel="noopener">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              </span>
+              <span>
+                <strong>WhatsApp</strong>
+                <small>(42) 99127-5048</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://www.linkedin.com/in/gabriel-kaique-correia-da-luz-a88342341" target="_blank" rel="noopener">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.2 8.65 21 10.9 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2.03 0-2.34 1.58-2.34 3.2V21H9z"/></svg>
+              </span>
+              <span>
+                <strong>LinkedIn</strong>
+                <small>/in/gabriel-kaique-correia-da-luz</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://github.com/kaka198977" target="_blank" rel="noopener">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.1 4.0 18.1 4.3 18.1 4.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+              </span>
+              <span>
+                <strong>GitHub</strong>
+                <small>@kaka198977</small>
+              </span>
+            </a>
+          </div>
+
+          <form
+            class="contact-form reveal"
+            data-delay="120"
+            id="contactForm"
+            action="https://formsubmit.co/ajax/gabrielcorreialuz2000@gmail.com"
+            method="POST"
+            novalidate>
+            <!-- Configurações do FormSubmit (não aparecem para o visitante) -->
+            <input type="hidden" name="_subject" value="Novo contato pelo portfólio" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <!-- Campo armadilha antispam: se for preenchido, o envio é descartado -->
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+              <small class="error-msg" data-for="nome"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+              <small class="error-msg" data-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="assunto">Assunto</label>
+              <input type="text" id="assunto" name="assunto" placeholder="Oportunidade, projeto, dúvida..." required />
+              <small class="error-msg" data-for="assunto"></small>
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+              <small class="error-msg" data-for="mensagem"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Enviar mensagem
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">Gabriel<span class="accent">.</span></span>
+        <p>Curso Técnico em ADS no SENAI · Python · C++ · Web · IA</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#curriculo">Currículo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <p class="footer-copy">
+        © <span id="year"></span> Gabriel Kaique Correia da Luz. Feito com HTML, CSS e JavaScript.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Dados dos projetos (edite este arquivo para adicionar/remover projetos) -->
+  <script src="projetos.js"></script>
+  <!-- Lógica do site -->
+  <script src="script.js"></script>
+</body>
+</html>

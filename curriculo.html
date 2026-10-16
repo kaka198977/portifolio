@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo — Gabriel Kaique Correia da Luz</title>
+  <meta name="description" content="Currículo de Gabriel Kaique Correia da Luz — Desenvolvedor de Software, Integração com Inteligência Artificial e Suporte Técnico." />
+  <style>
+    /* ===== Estilos do currículo (tela e impressão) ===== */
+    @page {
+      size: A4;
+      margin: 11mm 14mm;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #14161f;
+      background: #eceef4;
+      line-height: 1.4;
+      font-size: 9.6pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .folha {
+      max-width: 190mm;
+      margin: 24px auto;
+      padding: 11mm 14mm;
+      background: #fff;
+      box-shadow: 0 18px 40px -22px rgba(20, 22, 31, 0.45);
+    }
+
+    /* ---------- Cabeçalho ---------- */
+    .cabecalho {
+      text-align: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #14161f;
+    }
+
+    .nome {
+      font-size: 18.5pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .cargo {
+      margin-top: 5px;
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #2f4fd8;
+    }
+
+    .dados {
+      margin-top: 7px;
+      font-size: 9pt;
+      color: #4a4f60;
+    }
+
+    .dados span + span::before {
+      content: " • ";
+      color: #9aa0b4;
+    }
+
+    .dados a {
+      color: #2f4fd8;
+      text-decoration: none;
+    }
+
+    /* ---------- Seções ---------- */
+    section {
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #14161f;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #c9cddb;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: #33384a;
+      text-align: justify;
+    }
+
+    .item {
+      margin-bottom: 6px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .item-titulo {
+      font-weight: 700;
+    }
+
+    .item-data {
+      font-size: 8.5pt;
+      color: #6b7185;
+      white-space: nowrap;
+      font-style: italic;
+    }
+
+    .item-sub {
+      font-size: 9pt;
+      color: #4a4f60;
+      margin-bottom: 3px;
+    }
+
+    .tags-tec {
+      font-weight: 700;
+      color: #2f4fd8;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul.marcadores li {
+      position: relative;
+      padding-left: 13px;
+      margin-bottom: 2px;
+      color: #33384a;
+    }
+
+    ul.marcadores li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.52em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #2f4fd8;
+    }
+
+    .competencia {
+      margin-bottom: 5px;
+      color: #33384a;
+    }
+
+    .competencia strong {
+      color: #14161f;
+    }
+
+    /* ---------- Botão (só na tela) ---------- */
+    .botao-imprimir {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 13px 22px;
+      border: none;
+      border-radius: 12px;
+      background: #2f4fd8;
+      color: #fff;
+      font-size: 10pt;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 14px 30px -12px rgba(47, 79, 216, 0.7);
+    }
+
+    .botao-imprimir:hover {
+      background: #2340bd;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 9.1pt;
+        line-height: 1.34;
+      }
+
+      .folha {
+        margin: 0;
+        padding: 0;
+        max-width: none;
+        box-shadow: none;
+      }
+
+      .botao-imprimir {
+        display: none;
+      }
+
+      section {
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: #2f4fd8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="folha">
+    <header class="cabecalho">
+      <h1 class="nome">Gabriel Kaique Correia da Luz</h1>
+      <p class="cargo">Desenvolvedor de Software · Integração com Inteligência Artificial · Suporte Técnico</p>
+      <p class="dados">
+        <span>Nacionalidade: Brasileiro</span>
+        <span>Ponta Grossa — PR, Brasil</span>
+        <span>(42) 99127-5048</span>
+        <span><a href="mailto:gabrielcorreialuz2000@gmail.com">gabrielcorreialuz2000@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/gabriel-kaique-correia-da-luz-a88342341">linkedin.com/in/gabriel-kaique-correia-da-luz</a></span>
+      </p>
+    </header>
+
+    <section>
+      <h2>Resumo profissional</h2>
+      <p>
+        Desenvolvedor em formação com base sólida em lógica de programação, desenvolvimento web e
+        integração de Inteligência Artificial. Estudo no Curso Técnico em Análise e Desenvolvimento
+        de Sistemas (SENAI) e atuo na área notarial, onde desenvolvi organização documental,
+        precisão e responsabilidade no trato com dados. Procuro oportunidades como Desenvolvedor
+        Júnior, Estagiário ou Suporte Técnico, em modelo presencial, híbrido ou remoto.
+      </p>
+    </section>
+
+    <section>
+      <h2>Formação acadêmica</h2>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">SENAI (Brasil) — Curso Técnico em Análise e Desenvolvimento de Sistemas</span>
+          <span class="item-data">Conclusão prevista: 2026</span>
+        </div>
+        <p class="item-sub">
+          Foco em lógica de programação, algoritmos, desenvolvimento web e bases de dados.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">SESI (Brasil) — Ensino Médio (3.º ano)</span>
+          <span class="item-data">Conclusão prevista: 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiência profissional</h2>
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">2.º Registro de Imóveis de Ponta Grossa (Brasil)</span>
+          <span class="item-data">nov/2025 — atual</span>
+        </div>
+        <p class="item-sub">Assistente de Registro e Digitalização</p>
+        <ul class="marcadores">
+          <li>Registro, verificação e atualização contínua de dados no sistema notarial.</li>
+          <li>Digitalização, indexação e organização de documentos com alto padrão de precisão, padronização e segurança da informação.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projetos de desenvolvimento</h2>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">Sistema de Monitoramento e Manutenção Preditiva Industrial com IA (TCC)</span>
+          <span class="item-data">Python</span>
+        </div>
+        <ul class="marcadores">
+          <li>Software em Python para centralizar e monitorar equipamentos industriais em tempo real, a partir de análise de dados simulados.</li>
+          <li>Relatórios de acompanhamento de desgaste e gráficos de análise preditiva para prevenção de falhas.</li>
+          <li>Integração com LLMs de IA generativa via API para traduzir métricas técnicas em relatórios claros do estado operacional.</li>
+          <li>Planejamento de visualização 3D por camadas para identificação e localização de anomalias estruturais.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">Site educativo — Parque Estadual de Vila Velha</span>
+          <span class="item-data">HTML5 · CSS3 · JavaScript</span>
+        </div>
+        <ul class="marcadores">
+          <li>Projeto interdisciplinar em equipe (Equipe Trupe — SENAI), publicado online; responsável por toda a programação do site.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">Landing Pages Responsivas</span>
+          <span class="item-data">HTML5 · CSS3 · JavaScript</span>
+        </div>
+        <ul class="marcadores">
+          <li>Criação de interfaces web modernas e responsivas, adaptadas para múltiplos dispositivos.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">Desenvolvimento de Soluções e Algoritmos</span>
+          <span class="item-data">C++ · Python</span>
+        </div>
+        <ul class="marcadores">
+          <li>Programas práticos de lógica de programação, estruturas de controle e algoritmos.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-topo">
+          <span class="item-titulo">Websites Institucionais e Gestão Web</span>
+          <span class="item-data">HTML5 · CSS3</span>
+        </div>
+        <ul class="marcadores">
+          <li>Construção e manutenção de websites institucionais, com gestão de conteúdo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Competências técnicas</h2>
+      <p class="competencia"><strong>Linguagens de programação:</strong> Python 3, JavaScript, C++, HTML5, CSS3.</p>
+      <p class="competencia"><strong>Inteligência Artificial & Dados:</strong> Integração de APIs de IA (LLMs, OpenAI, Gemini), Engenharia de Prompt, Automação de Processos, Análise de Dados e Manutenção Preditiva.</p>
+      <p class="competencia"><strong>Ferramentas & Conhecimentos:</strong> Git e GitHub, VS Code, Pacote Office, Algoritmos, Banco de Dados e Lógica de Programação.</p>
+      <p class="competencia"><strong>Competências pessoais (soft skills):</strong> organização documental, raciocínio lógico, capacidade de aprendizagem rápida e trabalho em equipe.</p>
+    </section>
+  </div>
+
+  <button class="botao-imprimir" type="button" onclick="window.print()">Imprimir / Salvar em PDF</button>
+</body>
+</html>
