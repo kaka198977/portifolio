@@ -21,7 +21,7 @@ clique com o botão direito no `index.html` e escolha **Open with Live Server**.
 | Onde | O que trocar |
 |------|--------------|
 | `curriculo.html` | Conteúdo do seu currículo (a seção "Currículo" do site e o PDF saem daqui) |
-| `js/projetos.js` | Seus projetos reais — edite para adicionar/mudar projetos |
+| `projetos.js` | Seus projetos reais — edite para adicionar/mudar projetos |
 
 > **Atalho:** no VS Code, aperte `Ctrl + H` e use "Substituir tudo" para trocar informações
 > repetidas em todos os arquivos.
